@@ -1,0 +1,26 @@
+---
+layout: default
+title: "BIS – English"
+lang: en
+permalink: /en/
+---
+<section class="hero">
+  <span class="tag">Notes for Korean brands looking for overseas channels</span>
+  <h1>How a good product gets sold abroad,<br>built as a system.</h1>
+  <p>Field notes on building sales-agency and overseas direct-selling systems with AI.</p>
+</section>
+
+{% assign en_posts = site.posts | where: "lang", "en" %}
+{% if en_posts.size > 0 %}
+<ul class="post-list">
+  {% for post in en_posts %}
+  <li>
+    <span class="date">{{ post.date | date: "%Y.%m.%d" }}</span>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">English posts are coming soon.</p>
+{% endif %}

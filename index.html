@@ -1,0 +1,24 @@
+---
+layout: default
+title: "BIS – Business is a system"
+---
+<section class="hero">
+  <span class="tag">해외 판로를 찾는 한국 브랜드를 위한 실전 노트</span>
+  <h1>좋은 제품이 해외에서 팔리기까지,<br>그 과정을 시스템으로 만듭니다.</h1>
+  <p>판매대행, 해외 방판 유통, 광고와 콘텐츠를 AI와 함께 시스템으로 만들어 가며 배운 것을 기록합니다. 대표님이 내일 바로 써먹을 수 있는 것만 씁니다.</p>
+</section>
+
+{% assign ko_posts = site.posts | where: "lang", "ko" %}
+{% if ko_posts.size > 0 %}
+<ul class="post-list">
+  {% for post in ko_posts %}
+  <li>
+    <span class="date">{{ post.date | date: "%Y.%m.%d" }}{% if post.category_label %} · {{ post.category_label }}{% endif %}</span>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">첫 글을 준비하고 있습니다.</p>
+{% endif %}

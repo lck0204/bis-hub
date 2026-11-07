@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="post-meta">{{ page.date | date: "%Y.%m.%d" }}{% if page.category_label %} · {{ page.category_label }}{% endif %}</p>
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.description %}<p class="post-lead">{{ page.description }}</p>{% endif %}
+  <div class="post-body">
+    {{ content }}
+  </div>
+  <aside class="post-cta">
+    <p><strong>해외 판로를 준비 중이신가요?</strong> 궁금한 점은 <a href="{{ site.facebook_page }}">BIS 페이스북 페이지</a> 메시지로 남겨 주세요.</p>
+  </aside>
+  <p class="back"><a href="{{ '/' | relative_url }}">← 글 목록으로</a></p>
+</article>

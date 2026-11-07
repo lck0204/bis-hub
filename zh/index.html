@@ -1,0 +1,26 @@
+---
+layout: default
+title: "BIS – 中文"
+lang: zh
+permalink: /zh/
+---
+<section class="hero">
+  <span class="tag">为寻找海外渠道的韩国品牌而写</span>
+  <h1>好产品走向海外市场，<br>我们把这个过程做成系统。</h1>
+  <p>记录我们用 AI 搭建销售代理与海外直销渠道系统的实战经验。</p>
+</section>
+
+{% assign zh_posts = site.posts | where: "lang", "zh" %}
+{% if zh_posts.size > 0 %}
+<ul class="post-list">
+  {% for post in zh_posts %}
+  <li>
+    <span class="date">{{ post.date | date: "%Y.%m.%d" }}</span>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">中文内容即将上线。</p>
+{% endif %}

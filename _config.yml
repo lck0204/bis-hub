@@ -1,0 +1,23 @@
+title: "BIS – Business is a system"
+description: "판매대행·해외 유통을 시스템으로 만드는 과정을 기록합니다. 해외 판로를 찾는 한국 브랜드를 위한 실전 노트."
+url: "https://lck0204.github.io"
+baseurl: "/bis-hub"
+lang: ko
+timezone: Asia/Seoul
+author:
+  name: "BIS"
+facebook_page: "https://www.facebook.com/profile.php?id=61552895122136"
+
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+exclude:
+  - CLAUDE.md
+  - README.md
